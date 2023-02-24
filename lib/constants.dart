@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 const kTextFieldDecoration = InputDecoration(
-  hintText: 'name@email.com',
-  hintStyle: TextStyle(color:  Colors.black54),
+  hintStyle: TextStyle(
+      color:  Colors.black54,
+  ),
   contentPadding:
     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   border: OutlineInputBorder(
@@ -15,7 +16,7 @@ const kTextFieldDecoration = InputDecoration(
   ),
   focusedBorder: OutlineInputBorder(
     borderSide:
-      BorderSide(color: Colors.black26, width: 2.0),
+      BorderSide(color: Colors.blue, width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(8.0)),
   )
 );

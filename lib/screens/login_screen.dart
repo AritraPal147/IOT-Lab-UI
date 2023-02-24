@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:iot_lab_ui/constants.dart';
 import 'package:iot_lab_ui/screens/main_screen.dart';
 import 'package:iot_lab_ui/screens/sign_up_screen.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:iot_lab_ui/components/lib/RoundedButton.dart';
 
@@ -33,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Container(
                   height: 200.0,
                   child: Image.asset(
-                      'images/login_screen_image.png',
+                      'assets/images/login_screen_image.png',
                     fit: BoxFit.contain,
                     width: 200.0,
                   ),
@@ -41,35 +40,45 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height: 40.0,
+              height: 54.0,
             ),
 
             const Text(
               'EMAIL',
               style: TextStyle(
-                // fontSize: 10.0,
+                fontFamily: 'Mulish',
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const TextField(
-              decoration: kTextFieldDecoration,
+            const SizedBox(
+              height: 3.0,
+            ),
+            TextField(
+              decoration: kTextFieldDecoration.copyWith(
+                hintText: 'name@email.com',
+                prefixIcon: const Icon(Icons.email_outlined),
+              ),
               keyboardType: TextInputType.emailAddress,
             ),
 
             const SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
 
             const Text(
               'PASSWORD',
               style: TextStyle(
-                // fontSize: 10.0,
+                fontFamily: 'Mulish',
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(
+              height: 3.0,
             ),
             TextField(
               decoration: kTextFieldDecoration.copyWith(
                 hintText: '*********',
+                prefixIcon: const Icon(Icons.lock_outlined)
               ),
               obscureText: true,
             ),

@@ -12,8 +12,8 @@ class IotLabUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // theme: ThemeData(fontFamily: 'Mulish'),
       initialRoute: LoginScreen.id,
-
       routes: {
         LoginScreen.id: (context) => const LoginScreen(),
         SignUpScreen.id: (context) => const SignUpScreen(),

@@ -25,4 +25,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/
+    - assets/images/
+
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: assets/fonts/Mulish-ExtraBold.ttf
+#        - asset: assets/fonts/Mulish-Regular.ttf
