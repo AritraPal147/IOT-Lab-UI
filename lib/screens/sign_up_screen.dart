@@ -16,8 +16,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  String dropDownValue = 'Sweden';
-
   final List<String> countries = ['Sweden', 'Germany', 'Australia', 'USA', 'India', 'Japan'];
   String? selectedValue;
 
@@ -29,11 +27,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const SizedBox(
-                    height: 10.0,
+                    height: 5.0,
                   ),
                   Align(
                     alignment: Alignment.topRight,
@@ -171,8 +168,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   TextField(
                     decoration: kTextFieldDecoration.copyWith(
                         hintText: 'Entry',
-                      hintStyle: const TextStyle(
-                        color: Colors.black,
+                      hintStyle: TextStyle(
+                        color: HexColor('#7B8794'),
                       )
                     ),
                   ),

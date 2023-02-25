@@ -20,8 +20,8 @@ class LoginScreen extends StatefulWidget {
 // TODO: remove back button
 // TODO: add dummy email and password
 class _LoginScreenState extends State<LoginScreen> {
-  late String email;
-  late String password;
+  String email = '';
+  String password = '';
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               onChanged: (value) => email = value,
               decoration: kTextFieldDecoration.copyWith(
+                hintStyle: TextStyle(color: HexColor('#7B8794')),
                 hintText: 'name@email.com',
                 prefixIcon: const Icon(Icons.email_outlined),
               ),
@@ -89,6 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) => password = value,
               decoration: kTextFieldDecoration.copyWith(
                 hintText: '*********',
+                hintStyle: TextStyle(color: HexColor('#7B8794')
+                ),
                 prefixIcon: const Icon(Icons.lock_outlined)
               ),
               obscureText: true,
@@ -109,7 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         Fluttertoast.showToast(
                           msg: 'Invalid email or password',
                           toastLength: Toast.LENGTH_SHORT,
-                          gravity: ToastGravity.CENTER,
                         );
                       }
                     }),
@@ -118,10 +120,10 @@ class _LoginScreenState extends State<LoginScreen> {
               child: RichText(
                   text: TextSpan(
                     children: [
-                      const TextSpan(
+                      TextSpan(
                         text: 'Don\'t have an account? ',
                         style: TextStyle(
-                            color: Colors.black54),
+                            color: HexColor('#7B8794')),
                       ),
                       TextSpan(
                         text: 'Sign up',
