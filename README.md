@@ -1,16 +1,25 @@
 # iot_lab_ui
 
-Implementation of UI given by IOT Lab for App Dev
+# Implementation of UI given by IOT Lab for App Dev
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Login Screen
+Note: 
 
-A few resources to get you started if this is your first Flutter project:
+Use 
+- email: admin@email.com 
+- password: admin 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+for login
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Login Screen](https://user-images.githubusercontent.com/94114400/221370938-6142fb1a-6a7c-4b8c-b0f8-63fbf59b0dc7.jpeg)
+
+
+
+## Sign Up Screen
+![Sign Up screen](https://user-images.githubusercontent.com/94114400/221370935-c8bf475c-587d-4a81-bdae-c319a2e2169a.jpeg)
+
+
+
+## Main Screen
+![Login Screen](https://user-images.githubusercontent.com/94114400/221370938-6142fb1a-6a7c-4b8c-b0f8-63fbf59b0dc7.jpeg)
