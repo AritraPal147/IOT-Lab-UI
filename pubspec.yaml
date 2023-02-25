@@ -17,7 +17,6 @@ dependencies:
   hexcolor: ^3.0.1
   font_awesome_flutter: ^10.4.0
   material_segmented_control: ^4.2.0
-  double_back_to_close_app: ^2.1.0
 
 dev_dependencies:
   flutter_test:

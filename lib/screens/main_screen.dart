@@ -1,8 +1,8 @@
-import 'package:double_back_to_close_app/double_back_to_close_app.dart';
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:iot_lab_ui/screens/login_screen.dart';
 import 'package:material_segmented_control/material_segmented_control.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,7 +14,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int? groupValue = 0;
   int _currentSelectionForChildren = 0;
   int _currentSelectionForCalendar = 0;
 
@@ -40,13 +39,33 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: DoubleBackToCloseApp(
-        snackBar: const SnackBar(
-            content: Text('Tap back again to log out'),
+    Future<bool> showExitPopup() async {
+      return await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Exit App'),
+          content: const Text('Do you want to exit?'),
+          actions:[
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: const Text('No'),
+            ),
+
+            ElevatedButton(
+              onPressed: () => exit(0),
+              child: const Text('Yes'),
+            ),
+
+          ],
         ),
-        child: SafeArea(
+      )??false;
+    }
+
+    return WillPopScope(
+      onWillPop: showExitPopup,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
             child: Column(
