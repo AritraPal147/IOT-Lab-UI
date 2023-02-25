@@ -22,4 +22,4 @@ for login
 
 
 ## Main Screen
-![Login Screen](https://user-images.githubusercontent.com/94114400/221370938-6142fb1a-6a7c-4b8c-b0f8-63fbf59b0dc7.jpeg)
+![Main screen](https://user-images.githubusercontent.com/94114400/221370934-08f66254-ddc5-4f49-a2ff-18e51a8c9740.jpeg)
