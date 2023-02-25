@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +19,6 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
-// TODO: remove back button
-// TODO: add dummy email and password
 class _LoginScreenState extends State<LoginScreen> {
   String email = '';
   String password = '';
