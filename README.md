@@ -12,6 +12,8 @@ for login
 
 ![Login Screen](https://user-images.githubusercontent.com/94114400/221370938-6142fb1a-6a7c-4b8c-b0f8-63fbf59b0dc7.jpeg)
 
+![Login Screen Data](https://user-images.githubusercontent.com/94114400/221372804-3278b56a-f1ab-41ee-996f-6833a4b71f63.jpeg)
+
 
 
 ## Sign Up Screen
@@ -32,10 +34,14 @@ Tapping on any of the three buttons on the screen, namely
 The segmented controls in the screen will change the data below it when the segment is changed, i.e.,
  - Changing the segment from Statistics to Journey will change the Overview data (Total and 7-fast avg fields)
  - Changing the segment from Week to Month or Year will change the Total data and the date below it
+
+Also, on pressing back button on this screen, an alert dialog will be shown prompting the user to press yes to exit app.
  
 ![Main Screen Week](https://user-images.githubusercontent.com/94114400/221371826-14131495-36ab-4ca2-a99b-70221e9210f7.jpeg)
  
 ![Main Screen 1](https://user-images.githubusercontent.com/94114400/221371737-7f9786f3-19b8-480a-8d96-67c026b9d1b8.jpeg)
 
 ![Main screen](https://user-images.githubusercontent.com/94114400/221370934-08f66254-ddc5-4f49-a2ff-18e51a8c9740.jpeg)
+
+![Exit Dialog](https://user-images.githubusercontent.com/94114400/221372714-4df8ede2-7172-42c4-9213-0a32e024d932.jpeg)
 
