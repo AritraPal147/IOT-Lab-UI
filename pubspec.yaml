@@ -14,6 +14,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   modal_progress_hud_nsn: ^0.3.0
   animated_text_kit: ^4.2.2
+  fluttertoast: ^8.2.1
+  dropdown_button2: ^1.9.4
+  hexcolor: ^3.0.1
+  font_awesome_flutter: ^10.4.0
 
 dev_dependencies:
   flutter_test:
@@ -25,10 +29,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
+    - assets/images/logos/
+    - assets/images/icons/
 
   fonts:
     - family: Mulish
       fonts:
         - asset: assets/fonts/Mulish-ExtraBold.ttf
-#        - asset: assets/fonts/Mulish-Regular.ttf

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:iot_lab_ui/constants.dart';
 import 'package:iot_lab_ui/screens/main_screen.dart';
 import 'package:iot_lab_ui/screens/sign_up_screen.dart';
@@ -18,21 +20,27 @@ class LoginScreen extends StatefulWidget {
 // TODO: remove back button
 // TODO: add dummy email and password
 class _LoginScreenState extends State<LoginScreen> {
+  late String email;
+  late String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const SizedBox(
+              height: 50.0,
+            ),
             Flexible(
                 child: Container(
                   height: 200.0,
                   child: Image.asset(
-                      'assets/images/login_screen_image.png',
+                      'assets/images/logos/global_warming_logo.png',
                     fit: BoxFit.contain,
                     width: 200.0,
                   ),
@@ -48,12 +56,14 @@ class _LoginScreenState extends State<LoginScreen> {
               style: TextStyle(
                 fontFamily: 'Mulish',
                 fontWeight: FontWeight.bold,
+                fontSize: 14.0,
               ),
             ),
             const SizedBox(
               height: 3.0,
             ),
             TextField(
+              onChanged: (value) => email = value,
               decoration: kTextFieldDecoration.copyWith(
                 hintText: 'name@email.com',
                 prefixIcon: const Icon(Icons.email_outlined),
@@ -62,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height: 30.0,
+              height: 35.0,
             ),
 
             const Text(
@@ -76,6 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 3.0,
             ),
             TextField(
+              onChanged: (value) => password = value,
               decoration: kTextFieldDecoration.copyWith(
                 hintText: '*********',
                 prefixIcon: const Icon(Icons.lock_outlined)
@@ -88,9 +99,20 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             RoundedButton(
                 title: 'LOGIN',
-                colour: Colors.blue,
+                colour: HexColor('#2F80ED'),
                 onPressed:
-                    () => Navigator.pushNamed(context, MainScreen.id)),
+                    () {
+                      if (password == 'admin' && email == 'admin@email.com') {
+                        Navigator.pushNamed(context, MainScreen.id);
+                      }
+                      else {
+                        Fluttertoast.showToast(
+                          msg: 'Invalid email or password',
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.CENTER,
+                        );
+                      }
+                    }),
 
             Center(
               child: RichText(
@@ -103,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextSpan(
                         text: 'Sign up',
-                        style: const TextStyle(color: Colors.blue),
+                        style: TextStyle(color: HexColor('#2F80ED')),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => Navigator.pushNamed(context, SignUpScreen.id),
                       )
