@@ -4,9 +4,7 @@
 
 
 ## Login Screen
-Note: 
-
-Use 
+Use: 
 - email: admin@email.com 
 - password: admin 
 
